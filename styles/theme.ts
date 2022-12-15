@@ -15,6 +15,7 @@ const fonts = {
 };
 
 const colors = {
+  transparent: 'transparent',
   primary: {
     500: '#15D6D6',
     900: '#1a202c',
@@ -28,11 +29,13 @@ const colors = {
     100: '#1B202C',
     200: '#222833',
     300: '#171C26',
-
     500: '#13181F',
   },
-};
 
+  blueAlpha: {
+    700: 'rgba(23, 28, 38, 0.7)',
+  },
+};
 
 const config = {
   initialColorMode: 'dark',

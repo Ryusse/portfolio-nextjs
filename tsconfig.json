@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@particles/*": ["./shared/elements/particles/*"],
+      "@/*": ["./shared/*"],
+      "@styles/*": ["./styles/*"]
+    },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

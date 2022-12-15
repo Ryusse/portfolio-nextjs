@@ -1,12 +1,39 @@
+import { FC, ReactElement, ReactNode } from 'react';
+
 import { ChakraProvider } from '@chakra-ui/provider';
+import { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 
 import theme from '../styles/theme';
 
-export default function App({ Component, pageProps }: AppProps) {
+interface Props {
+  children: ReactNode;
+}
+
+const MyComponent = ({ children }: Props) => {
+  return <>{children}</>;
+};
+
+export interface ChakraProps extends AppProps {
+  Component: NextPageWithLayout;
+}
+
+type NextPageWithLayout = NextPage & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+const App: FC<ChakraProps> = ({ Component, pageProps }) => {
+  const getLayout = Component.getLayout ?? ((page: ReactNode) => page);
+
   return (
     <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
+      {getLayout(
+        <MyComponent>
+          <Component {...pageProps} />
+        </MyComponent>
+      )}
     </ChakraProvider>
   );
-}
+};
+
+export default App;
