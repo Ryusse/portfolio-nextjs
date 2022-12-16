@@ -1,19 +1,32 @@
 import { ReactElement } from 'react';
 
+import { Box } from '@chakra-ui/react';
 import { NextPage } from 'next';
 
-import { Banner, Container, GridWrapper } from '@/elements/organisms';
+import { AboutSidebar, Banner, Container, Layout } from '@/elements/organisms';
 
 const About: NextPage = () => {
   return (
-    <div>
+    <>
       <Banner />
-      <GridWrapper>
-        <Container>
-          <h2>Containerrr</h2>
-        </Container>
-      </GridWrapper>
-    </div>
+      <Box position="relative">
+        <Box
+          width="100%"
+          position="absolute"
+          top="-15rem"
+          zIndex={10}
+          left="50%"
+          transform="translateX(-50%)"
+        >
+          <Layout columns={2}>
+            <AboutSidebar />
+            <Container>
+              <h2>Containerrr</h2>
+            </Container>
+          </Layout>
+        </Box>
+      </Box>
+    </>
   );
 };
 

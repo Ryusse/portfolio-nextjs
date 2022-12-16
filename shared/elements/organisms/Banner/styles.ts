@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import styled from '@emotion/styled';
+import theme from '@styles/theme';
 import Image from 'next/image';
 
 export const StyledBannerImage = styled(Image)`
@@ -20,6 +21,6 @@ export const StyledBannerContainer = styled(Box)`
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: ${(props) => props.theme.colors.blueAlpha[700]};
+    background-color: ${theme.colors.blueAlpha[700]};
   }
 `;

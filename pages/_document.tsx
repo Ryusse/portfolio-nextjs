@@ -10,7 +10,7 @@ export default function Document() {
       <Head />
       <body>
         <Link
-          href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap"
+          href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap"
           rel="stylesheet"
         />
 
