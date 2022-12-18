@@ -1,6 +1,8 @@
 import { FC, ReactElement, ReactNode } from 'react';
 
 import { ChakraProvider } from '@chakra-ui/provider';
+import { Global } from '@emotion/react';
+import { GlobalStyles } from '@styles/utils/custom';
 import { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 
@@ -26,13 +28,16 @@ const App: FC<ChakraProps> = ({ Component, pageProps }) => {
   const getLayout = Component.getLayout ?? ((page: ReactNode) => page);
 
   return (
-    <ChakraProvider theme={theme}>
-      {getLayout(
-        <MyComponent>
-          <Component {...pageProps} />
-        </MyComponent>
-      )}
-    </ChakraProvider>
+    <>
+      <Global styles={GlobalStyles} />
+      <ChakraProvider theme={theme}>
+        {getLayout(
+          <MyComponent>
+            <Component {...pageProps} />
+          </MyComponent>
+        )}
+      </ChakraProvider>
+    </>
   );
 };
 

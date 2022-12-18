@@ -32,7 +32,7 @@ export const Header = () => {
         <Box margin={0}>
           <Heading
             as="h1"
-            textStyle="h2"
+            textStyle="subheading01"
             size="1px"
             marginBottom="4px"
             color="gray.300"

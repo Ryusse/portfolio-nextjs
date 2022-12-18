@@ -12,7 +12,6 @@ export const StyledBannerImage = styled(Image)`
 export const StyledBannerContainer = styled(Box)`
   position: relative;
   height: 31.25rem;
-
   &:before {
     content: '';
     position: absolute;

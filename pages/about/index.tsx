@@ -1,9 +1,13 @@
-import { ReactElement } from 'react';
-
 import { Box } from '@chakra-ui/react';
 import { NextPage } from 'next';
 
-import { AboutSidebar, Banner, Container, Layout } from '@/elements/organisms';
+import {
+  AboutContent,
+  AboutSidebar,
+  Banner,
+  Container,
+  Layout,
+} from '@/elements/organisms';
 
 const About: NextPage = () => {
   return (
@@ -20,9 +24,7 @@ const About: NextPage = () => {
         >
           <Layout columns={2}>
             <AboutSidebar />
-            <Container>
-              <h2>Containerrr</h2>
-            </Container>
+            <AboutContent />
           </Layout>
         </Box>
       </Box>

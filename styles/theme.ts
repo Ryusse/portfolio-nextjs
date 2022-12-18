@@ -1,5 +1,5 @@
-import { defineStyle, extendTheme } from '@chakra-ui/react';
-import { colors } from '@styles/Base/colors';
+import { extendTheme } from '@chakra-ui/react';
+import { colors } from '@styles/base/colors';
 import { badgeTheme } from '@styles/components/badgeTheme';
 
 //import { mode } from '@chakra-ui/theme-tools';
@@ -10,6 +10,9 @@ const styles = {
       //bg: mode('#f0e7db', '#13181F')(props),
       bg: colors.background.paper,
       color: colors.gray[500],
+    },
+    p: {
+      lineHeight: '28px',
     },
   }),
 };
@@ -23,24 +26,31 @@ const breakpoints = {
 };
 
 const textStyles = {
-  h1: {
-    fontSize: ['48px', '72px'],
-    fontWeight: 'bold',
-    lineHeight: '110%',
-    letterSpacing: '-2%',
+  heading01: {
+    fontSize: ['48px'],
   },
-  h2: {
-    fontSize: ['1.375rem'],
-    fontWeight: 'semibold',
-    lineHeight: '28px',
+  heading02: {
+    fontSize: ['40px'],
   },
-  subheading03: {
+  heading03: {
+    fontSize: ['36px'],
+  },
+  heading04: {
+    fontSize: ['32px'],
+  },
+  heading05: {
+    fontSize: ['28px'],
+  },
+  heading06: {
+    fontSize: ['24px'],
+  },
+  subheading01: {
     fontSize: ['22px'],
   },
-  subheading04: {
+  subheading02: {
     fontSize: ['20px'],
   },
-  subheading05: {
+  subheading03: {
     fontSize: ['18px'],
   },
   textParagraph01: {
