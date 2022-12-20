@@ -74,8 +74,8 @@ export const Content = () => {
           <HStack flexWrap="wrap" spacing={0} gap="1.25rem" marginTop="1.25rem">
             <Tooltip
               hasArrow
-              backgroundColor="primary.main"
-              color="blue.500"
+              backgroundColor="secondary.dark"
+              color="white"
               borderRadius="1.563rem"
               bottom={4}
               label={<TooltipLabel>Email</TooltipLabel>}
@@ -91,8 +91,8 @@ export const Content = () => {
             </Tooltip>
             <Tooltip
               hasArrow
-              backgroundColor="primary.main"
-              color="blue.500"
+              backgroundColor="secondary.dark"
+              color="white"
               borderRadius="1.563rem"
               bottom={4}
               label={<TooltipLabel>Github</TooltipLabel>}
@@ -108,8 +108,8 @@ export const Content = () => {
             </Tooltip>
             <Tooltip
               hasArrow
-              backgroundColor="primary.main"
-              color="blue.500"
+              backgroundColor="secondary.dark"
+              color="white"
               borderRadius="1.563rem"
               bottom={4}
               label={<TooltipLabel>Linkedin</TooltipLabel>}

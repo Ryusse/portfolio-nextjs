@@ -44,7 +44,7 @@ export const Header = () => {
             <Box
               width="12px"
               height="12px"
-              backgroundColor="primary.main"
+              backgroundColor="secondary.main"
               borderRadius="100%"
             ></Box>
             <Text textStyle="textParagraph02">Open to work</Text>

@@ -1,7 +1,13 @@
 export const colors = {
   transparent: 'transparent',
   primary: {
-    main: '#15D6D6',
+    main: '#740cdc',
+    dark: '#490C86DE',
+  },
+
+  secondary: {
+    main: '#66d9ed',
+    dark: '#28cae7',
   },
 
   background: {

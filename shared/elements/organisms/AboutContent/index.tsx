@@ -1,19 +1,20 @@
 import {
   Accordion,
   AccordionButton,
-  AccordionIcon,
   AccordionItem,
   AccordionPanel,
   Box,
   Heading,
-  HStack,
   Stack,
   Text,
   VStack,
 } from '@chakra-ui/react';
-import { PlusLg } from '@emotion-icons/bootstrap';
-import { Calendar } from '@emotion-icons/zondicons';
 
+import { experience } from '@/data/experience';
+import {
+  AccordionExperienceContent,
+  AccordionExperienceHeader,
+} from '@/elements/molecules';
 import { Container } from '@/elements/organisms';
 
 export const AboutContent = () => {
@@ -80,42 +81,28 @@ export const AboutContent = () => {
           >
             My work experience
           </Heading>
-          <Accordion allowMultiple>
-            <AccordionItem>
-              <AccordionButton
-                paddingY="0.875rem"
-                paddingX="1.5rem"
-                backgroundColor="blue.200"
-                borderColor="transparent"
-                _expanded={{ bg: 'tomato', color: 'white' }}
-              >
-                <Stack
-                  as="div"
-                  width="100%"
-                  direction="row"
-                  alignItems="center"
-                  justifyContent="space-between"
-                >
-                  <Text>Junior Frontend Developer at Winning</Text>
-                  <HStack gap="1.8rem" flexDir="row">
-                    <Stack direction="row" alignItems="center" gap="10px">
-                      <Calendar width="1rem" />
-                      <Text>February 2022 - now</Text>
-                    </Stack>
-                    <PlusLg width="1rem" />
-                  </HStack>
-                </Stack>
-              </AccordionButton>
-              <AccordionPanel pb={4}>
-                <Text>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </Text>
-              </AccordionPanel>
-            </AccordionItem>
-          </Accordion>
+          <VStack spacing="1rem">
+            {experience &&
+              experience.map((_, i) => (
+                <Accordion key={i} allowMultiple width="100%">
+                  <AccordionItem>
+                    {({ isExpanded }) => (
+                      <>
+                        <AccordionButton data-group>
+                          <AccordionExperienceHeader
+                            isExpanded={isExpanded}
+                            header={_?.header}
+                          />
+                        </AccordionButton>
+                        <AccordionPanel marginTop="1rem">
+                          <AccordionExperienceContent content={_?.content} />
+                        </AccordionPanel>
+                      </>
+                    )}
+                  </AccordionItem>
+                </Accordion>
+              ))}
+          </VStack>
         </Box>
       </VStack>
     </Container>

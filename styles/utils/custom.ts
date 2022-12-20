@@ -13,4 +13,7 @@ export const GlobalStyles = css`
   .rounded-10 {
     border-radius: 0.625rem;
   }
+  .rounded-8 {
+    border-radius: 0.5rem;
+  }
 `;

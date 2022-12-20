@@ -1,5 +1,6 @@
 import { extendTheme } from '@chakra-ui/react';
 import { colors } from '@styles/base/colors';
+import { accordionTheme } from '@styles/components/accordionTheme';
 import { badgeTheme } from '@styles/components/badgeTheme';
 
 //import { mode } from '@chakra-ui/theme-tools';
@@ -71,7 +72,7 @@ const fonts = {
   body: 'Satoshi, sans-serif',
 };
 
-const components = { Badge: badgeTheme };
+const components = { Badge: badgeTheme, Accordion: accordionTheme };
 
 const config = {
   initialColorMode: 'dark',
