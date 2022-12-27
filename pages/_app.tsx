@@ -7,6 +7,7 @@ import { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 
 import theme from '../styles/theme';
+import { Header } from '@/elements/organisms';
 
 interface Props {
   children: ReactNode;
@@ -29,8 +30,9 @@ const App: FC<ChakraProps> = ({ Component, pageProps }) => {
 
   return (
     <>
-      <Global styles={GlobalStyles} />
       <ChakraProvider theme={theme}>
+        <Global styles={GlobalStyles} />
+        <Header />
         {getLayout(
           <MyComponent>
             <Component {...pageProps} />

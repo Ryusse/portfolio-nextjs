@@ -1,3 +1,4 @@
+import { useTheme } from '@chakra-ui/react';
 import { css } from '@emotion/react';
 
 export const GlobalStyles = css`
@@ -15,5 +16,12 @@ export const GlobalStyles = css`
   }
   .rounded-8 {
     border-radius: 0.5rem;
+  }
+
+  .header-link {
+    position: relative;
+    padding-inline: 2.8rem;
+    padding-block: 1rem;
+    font-weight: 600;
   }
 `;

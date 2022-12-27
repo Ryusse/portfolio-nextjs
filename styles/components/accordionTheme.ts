@@ -15,7 +15,7 @@ const baseStyle = definePartsStyle({
     paddingY: '0.9375rem',
     paddingX: '1.5rem',
     backgroundColor: colors.primary.dark,
-    borderColor: 'transparent',
+    borderColor: '',
     borderRadius: '6px',
     fontWeight: 600,
     border: 'none',

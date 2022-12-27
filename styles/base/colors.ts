@@ -6,8 +6,8 @@ export const colors = {
   },
 
   secondary: {
-    main: '#66d9ed',
-    dark: '#28cae7',
+    main: '#15D6D6',
+    dark: '#07c4c4',
   },
 
   background: {
