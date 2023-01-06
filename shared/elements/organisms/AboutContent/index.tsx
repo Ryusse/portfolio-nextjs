@@ -54,7 +54,7 @@ export const AboutContent = () => {
                 learning and improving skills.
               </Text>
             </Box>
-            <Box>
+            <Box display={{ base: 'none', md: 'block' }}>
               <svg
                 width="34"
                 height="190"

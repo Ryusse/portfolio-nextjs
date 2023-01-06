@@ -6,7 +6,7 @@ import { Header } from '@/elements/organisms/AboutSidebar/Header';
 
 export const AboutSidebar = () => {
   return (
-    <Container>
+    <Container sx={{ display: { base: 'none', lg: 'block' } }}>
       <Box as="aside">
         <Header />
         <Content />

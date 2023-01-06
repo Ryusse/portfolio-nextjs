@@ -14,7 +14,10 @@ export const Layout = ({ children, columns = 1 }: Props) => {
   return (
     <Container maxW="container.xl">
       <Grid
-        templateColumns={`${columns === 2 ? '380px 1fr ' : '1fr'}`}
+        templateColumns={{
+          base: '1fr',
+          lg: `${columns === 2 ? '380px 1fr ' : '1fr'}`,
+        }}
         gap={6}
         width="100%"
       >

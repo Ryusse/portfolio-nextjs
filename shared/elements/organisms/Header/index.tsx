@@ -83,7 +83,7 @@ export const Header = () => {
               />
             </svg>
           </Link>
-          <Box as="nav" paddingY="1rem">
+          <Box as="nav" paddingY="1rem" display={{ base: 'none', md: 'block' }}>
             <UnorderedList display="flex" listStyleType="none">
               {links &&
                 links.map((_, i) => (
