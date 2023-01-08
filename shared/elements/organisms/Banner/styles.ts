@@ -11,7 +11,12 @@ export const StyledBannerImage = styled(Image)`
 
 export const StyledBannerContainer = styled(Box)`
   position: relative;
-  height: 31.25rem;
+  height: 100vh;
+
+  @media screen and (min-width: ${theme.breakpoints.lg}) {
+    height: 31.25rem;
+  }
+
   &:before {
     content: '';
     position: absolute;

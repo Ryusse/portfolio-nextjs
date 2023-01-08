@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { Box, chakra, HStack, ListItem, UnorderedList } from '@chakra-ui/react';
+import { Menu, Remixicon } from '@emotion-icons/remix-fill';
 import { isValidMotionProp, motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -63,7 +64,8 @@ export const Header = () => {
           backdropFilter={`${isScroll ? 'blur(12.5px)' : 'blur(0px)'}`}
           backgroundColor={`${isScroll ? 'blueAlpha.700' : 'transparent'}`}
           borderRadius="0.5rem"
-          paddingX="1rem"
+          paddingX={{ lg: '1rem' }}
+          margin={0}
           border="1px"
           borderColor={`${isScroll ? 'blue.200' : 'transparent'}`}
         >
@@ -83,7 +85,7 @@ export const Header = () => {
               />
             </svg>
           </Link>
-          <Box as="nav" paddingY="1rem" display={{ base: 'none', md: 'block' }}>
+          <Box as="nav" paddingY="1rem" display={{ base: 'none', lg: 'block' }}>
             <UnorderedList display="flex" listStyleType="none">
               {links &&
                 links.map((_, i) => (
@@ -110,6 +112,9 @@ export const Header = () => {
                   </ListItem>
                 ))}
             </UnorderedList>
+          </Box>
+          <Box as="button" display={{ lg: 'none' }}>
+            <Menu width="1.7rem" color="gray.100" />
           </Box>
         </HStack>
       </Layout>

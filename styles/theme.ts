@@ -2,6 +2,7 @@ import { extendTheme } from '@chakra-ui/react';
 import { colors } from '@styles/base/colors';
 import { accordionTheme } from '@styles/components/accordionTheme';
 import { badgeTheme } from '@styles/components/badgeTheme';
+import { dividerTheme } from '@styles/components/divider';
 
 //import { mode } from '@chakra-ui/theme-tools';
 
@@ -11,9 +12,18 @@ const styles = {
       //bg: mode('#f0e7db', '#13181F')(props),
       bg: colors.background.paper,
       color: colors.gray[500],
+      fontSize: '14px',
+
+      [`@media screen and (min-width: ${props.theme.breakpoints.lg})`]: {
+        fontSize: '16px',
+      },
     },
     p: {
-      lineHeight: '28px',
+      lineHeight: '25px',
+
+      [`@media screen and (min-width: ${props.theme.breakpoints.lg})`]: {
+        lineHeight: '28px',
+      },
     },
   }),
 };
@@ -72,7 +82,11 @@ const fonts = {
   body: 'Satoshi, sans-serif',
 };
 
-const components = { Badge: badgeTheme, Accordion: accordionTheme };
+const components = {
+  Badge: badgeTheme,
+  Accordion: accordionTheme,
+  Divider: dividerTheme,
+};
 
 const config = {
   initialColorMode: 'dark',

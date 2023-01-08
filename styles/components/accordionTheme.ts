@@ -11,6 +11,7 @@ const baseStyle = definePartsStyle({
   },
 
   button: {
+    fontSize: { base: '14px', lg: '1rem' },
     cursor: 'default',
     paddingY: '0.9375rem',
     paddingX: '1.5rem',

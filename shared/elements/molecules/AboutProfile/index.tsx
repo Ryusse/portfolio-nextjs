@@ -7,7 +7,7 @@ import {
   StyledProfileImage,
 } from '@/elements/organisms/AboutSidebar/styles';
 
-export const Header = () => {
+export const AboutProfile = () => {
   return (
     <>
       <Stack as="header" direction="row" gap="1.875rem">
@@ -55,12 +55,6 @@ export const Header = () => {
           </HStack>
         </Box>
       </Stack>
-      <Divider
-        marginY="2.375rem"
-        backgroundColor="blue.200"
-        borderColor="blue.200"
-        color="blue.200"
-      />
     </>
   );
 };

@@ -18,14 +18,12 @@ export const AccordionExperienceHeader = ({ isExpanded, header }: Props) => {
       alignItems="center"
       justifyContent="space-between"
     >
-      <Text>{header?.title}</Text>
-      <HStack
-        display={{ base: 'none', md: 'flex' }}
-        gap="1.8rem"
-        flexDir="row"
-        position="relative"
-      >
+      <Text textAlign="left" marginRight={{ base: '2.8rem', lg: '0rem' }}>
+        {header?.title}
+      </Text>
+      <HStack gap="1.8rem" flexDir="row" position="relative">
         <Stack
+          display={{ base: 'none', md: 'flex' }}
           direction="row"
           alignItems="center"
           gap="10px"

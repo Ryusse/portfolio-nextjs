@@ -1,16 +1,16 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Divider, HStack, VStack } from '@chakra-ui/react';
 
-import { Content } from '../AboutSidebar/Content/Index';
+import { AboutProfile, AboutSkills } from '@/elements/molecules';
 import { Container } from '@/elements/organisms';
-import { Header } from '@/elements/organisms/AboutSidebar/Header';
 
 export const AboutSidebar = () => {
   return (
     <Container sx={{ display: { base: 'none', lg: 'block' } }}>
-      <Box as="aside">
-        <Header />
-        <Content />
-      </Box>
+      <VStack as="aside" alignItems="start" spacing="3rem">
+        <AboutProfile />
+        <Divider variant="base" />
+        <AboutSkills />
+      </VStack>
     </Container>
   );
 };

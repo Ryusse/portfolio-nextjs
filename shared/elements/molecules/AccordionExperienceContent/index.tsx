@@ -10,6 +10,7 @@ import {
   TabPanels,
   Tabs,
   Text,
+  useMediaQuery,
 } from '@chakra-ui/react';
 import { LocationPin } from '@emotion-icons/entypo';
 import { ExternalLink } from '@emotion-icons/evil';
@@ -24,9 +25,13 @@ interface ContentProps {
 
 export const TabContent = ({ content }: ContentProps) => {
   return (
-    <Grid templateColumns="1fr auto" gap={6}>
+    <Grid templateColumns={{ base: '1fr', lg: '1fr auto' }} gap={6}>
       <Box>
-        <Stack direction="row" alignItems="center" gap="1rem">
+        <Stack
+          direction={{ base: 'row', lg: 'row' }}
+          alignItems="center"
+          gap="1rem"
+        >
           <HStack>
             <LocationPin width="1.2rem" />
             <Text textStyle="textParagraph02">{content?.location}</Text>
@@ -81,8 +86,15 @@ interface AccordionProps {
   content: IExperienceContent[];
 }
 export const AccordionExperienceContent = ({ content }: AccordionProps) => {
+  const [isLargerThanLg] = useMediaQuery('(min-width: 62em)');
+
   return (
-    <Tabs orientation="vertical" id="tabs-1" variant="line" isFitted>
+    <Tabs
+      orientation={!isLargerThanLg ? 'horizontal' : 'vertical'}
+      id="tabs-1"
+      variant="line"
+      isFitted
+    >
       <TabList>
         {content &&
           content.map((_, i) => (
@@ -90,7 +102,7 @@ export const AccordionExperienceContent = ({ content }: AccordionProps) => {
               key={i}
               width="100%"
               padding="1rem"
-              justifyContent="start"
+              justifyContent={{ base: 'center', lg: 'start' }}
               alignItems="center"
               _selected={{
                 color: 'secondary.main',
@@ -99,7 +111,11 @@ export const AccordionExperienceContent = ({ content }: AccordionProps) => {
             >
               <HStack alignItems="center">
                 <Business width="1rem" />
-                <Text>{_?.title}</Text>
+                <Text
+                  textStyle={{ base: 'textParagraph02', lg: 'textParagraph01' }}
+                >
+                  {_?.title}
+                </Text>
               </HStack>
             </Tab>
           ))}
@@ -107,7 +123,12 @@ export const AccordionExperienceContent = ({ content }: AccordionProps) => {
       <TabPanels>
         {content &&
           content.map((_, i) => (
-            <TabPanel key={i}>
+            <TabPanel
+              key={i}
+              padding={0}
+              marginTop={{ base: '2rem', lg: 0 }}
+              marginLeft={{ lg: '2rem' }}
+            >
               <TabContent content={_} />
             </TabPanel>
           ))}

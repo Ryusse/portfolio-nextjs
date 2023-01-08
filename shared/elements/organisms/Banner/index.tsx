@@ -1,8 +1,13 @@
+import { ReactNode } from 'react';
+
 import { StyledBannerContainer, StyledBannerImage } from './styles';
 
 import Banner1 from '/public/jpg/hero.jpg';
 
-export const Banner = () => {
+interface Props {
+  children?: ReactNode;
+}
+export const Banner = ({ children }: Props) => {
   return (
     <StyledBannerContainer as="figure">
       <StyledBannerImage
@@ -15,6 +20,7 @@ export const Banner = () => {
               (max-width: 1200px) 50vw,
               33vw"
       ></StyledBannerImage>
+      {children}
     </StyledBannerContainer>
   );
 };

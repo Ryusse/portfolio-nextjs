@@ -8,7 +8,7 @@ import {
   StyledLinkedin,
 } from '@/elements/organisms/AboutSidebar/styles';
 
-export const Content = () => {
+export const AboutSkills = () => {
   return (
     <Box>
       <VStack alignItems="start" spacing="2.375rem">

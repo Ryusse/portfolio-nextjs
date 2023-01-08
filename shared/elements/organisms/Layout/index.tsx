@@ -8,11 +8,12 @@ interface Props {
 
 interface Props {
   columns?: number;
+  containerStyles?: any;
 }
 
-export const Layout = ({ children, columns = 1 }: Props) => {
+export const Layout = ({ children, columns = 1, containerStyles }: Props) => {
   return (
-    <Container maxW="container.xl">
+    <Container sx={containerStyles} maxW="container.xl">
       <Grid
         templateColumns={{
           base: '1fr',
