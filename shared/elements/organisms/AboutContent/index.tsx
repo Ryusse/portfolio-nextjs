@@ -1,23 +1,6 @@
-import {
-  Accordion,
-  AccordionButton,
-  AccordionItem,
-  AccordionPanel,
-  Box,
-  Divider,
-  Heading,
-  Stack,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Divider, VStack } from '@chakra-ui/react';
 
-import { experience } from '@/data/experience';
-import {
-  AboutDescription,
-  AboutWorkExperience,
-  AccordionExperienceContent,
-  AccordionExperienceHeader,
-} from '@/elements/molecules';
+import { AboutDescription, AboutWorkExperience } from '@/elements/molecules';
 import { Container } from '@/elements/organisms';
 
 export const AboutContent = () => {

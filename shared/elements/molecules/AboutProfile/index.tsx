@@ -1,4 +1,4 @@
-import { Box, Divider, Heading, HStack, Stack, Text } from '@chakra-ui/react';
+import { Box, Heading, HStack, Stack, Text } from '@chakra-ui/react';
 
 import ProfileImage from '/public/jpg/hero.jpg';
 

@@ -1,4 +1,4 @@
-import { Box, Divider, HStack, VStack } from '@chakra-ui/react';
+import { Divider, VStack } from '@chakra-ui/react';
 
 import { AboutProfile, AboutSkills } from '@/elements/molecules';
 import { Container } from '@/elements/organisms';
