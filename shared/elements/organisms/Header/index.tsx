@@ -38,12 +38,11 @@ export const Header = () => {
 
   useEffect(() => {
     if (router.asPath !== CustomRoutesDefault.about()) {
-      console.log('true');
       if (onScroll > 20) {
         setIsScroll(true);
-      } else {
-        setIsScroll(false);
       }
+    } else {
+      setIsScroll(false);
     }
   }, [onScroll, isScroll]);
 
@@ -64,7 +63,6 @@ export const Header = () => {
           backdropFilter={`${isScroll ? 'blur(12.5px)' : 'blur(0px)'}`}
           backgroundColor={`${isScroll ? 'blueAlpha.700' : 'transparent'}`}
           borderRadius="0.5rem"
-          paddingX={{ lg: '1rem' }}
           margin={0}
           border="1px"
           borderColor={`${isScroll ? 'blue.200' : 'transparent'}`}

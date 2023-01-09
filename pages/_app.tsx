@@ -1,13 +1,14 @@
 import { FC, ReactElement, ReactNode } from 'react';
 
 import { ChakraProvider } from '@chakra-ui/provider';
+import { Box } from '@chakra-ui/react';
 import { Global } from '@emotion/react';
 import { GlobalStyles } from '@styles/utils/custom';
 import { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 
 import theme from '../styles/theme';
-import { Header } from '@/elements/organisms';
+import { Footer, Header } from '@/elements/organisms';
 
 interface Props {
   children: ReactNode;
@@ -38,6 +39,7 @@ const App: FC<ChakraProps> = ({ Component, pageProps }) => {
             <Component {...pageProps} />
           </MyComponent>
         )}
+        <Footer />
       </ChakraProvider>
     </>
   );
