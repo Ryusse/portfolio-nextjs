@@ -54,9 +54,9 @@ export const TabContent = ({ content }: ContentProps) => {
             </Text>
           </HStack>
         </Stack>
-        <Box textStyle="textParagraph02" marginTop="0.8rem">
+        <Text textStyle="textParagraph02" marginTop="0.8rem">
           {content?.description}
-        </Box>
+        </Text>
         <HStack marginTop="1rem" flexWrap="wrap" spacing={0} gap="0.625rem">
           {content?.techStack &&
             content?.techStack.map((_, i) => (

@@ -1,7 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
+import Image from 'next/image';
 
 import ProfileImage from '../../../../public/jpg/hero.jpg';
-import { StyledProfileImage } from '@/elements/organisms/AboutSidebar/styles';
 
 export const AboutProfileMobile = () => {
   return (
@@ -47,7 +47,8 @@ export const AboutProfileMobile = () => {
           borderWidth={2}
           borderColor="gray.300"
         >
-          <StyledProfileImage
+          <Image
+            className="w-full h-full object-cover rounded-full"
             src={ProfileImage.src}
             alt="profile image"
             quality={100}
@@ -55,7 +56,7 @@ export const AboutProfileMobile = () => {
             sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
-          ></StyledProfileImage>
+          />
         </Box>
         <Box marginTop={5}>
           <Text

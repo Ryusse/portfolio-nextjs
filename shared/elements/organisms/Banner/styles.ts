@@ -1,13 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import theme from '@styles/theme';
-import Image from 'next/image';
-
-export const StyledBannerImage = styled(Image)`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
 
 export const StyledBannerContainer = styled(Box)`
   position: relative;

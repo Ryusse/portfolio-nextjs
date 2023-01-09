@@ -1,5 +1,5 @@
 import { defineStyle, defineStyleConfig } from '@chakra-ui/react';
-import { colors } from '@styles/base/colors';
+import { colors } from '@styles/abstracts/colors';
 
 const base = defineStyle({
   borderBottomWidth: '1px',

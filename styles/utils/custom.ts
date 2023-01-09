@@ -1,5 +1,6 @@
-import { useTheme } from '@chakra-ui/react';
 import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+import Image from 'next/image';
 
 export const GlobalStyles = css`
   .object-cover {
@@ -18,10 +19,20 @@ export const GlobalStyles = css`
     border-radius: 0.5rem;
   }
 
+  .rounded-full {
+    border-radius: 100%;
+  }
+
   .header-link {
     position: relative;
     padding-inline: 2.8rem;
     padding-block: 1rem;
     font-weight: 600;
   }
+`;
+
+export const StyledImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;

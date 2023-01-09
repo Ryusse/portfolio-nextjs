@@ -3,14 +3,6 @@ import { Email } from '@emotion-icons/material-rounded';
 import { Location } from '@emotion-icons/octicons';
 import styled from '@emotion/styled';
 import theme from '@styles/theme';
-import Image from 'next/image';
-
-export const StyledProfileImage = styled(Image)`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 100%;
-`;
 
 export const StyledLocationIcon = styled(Location)`
   width: 14px;
