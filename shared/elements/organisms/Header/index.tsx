@@ -1,6 +1,13 @@
 import { useEffect, useState } from 'react';
 
-import { Box, chakra, HStack, ListItem, UnorderedList } from '@chakra-ui/react';
+import {
+  Box,
+  chakra,
+  HStack,
+  ListItem,
+  Text,
+  UnorderedList,
+} from '@chakra-ui/react';
 import { Menu, Remixicon } from '@emotion-icons/remix-fill';
 import { isValidMotionProp, motion } from 'framer-motion';
 import Link from 'next/link';
@@ -9,6 +16,10 @@ import { useRouter } from 'next/router';
 import { Layout } from '@/elements/organisms';
 import { useScrollPosition } from '@/hooks';
 import { CustomRoutesDefault } from '@/utils';
+
+import Image from 'next/image';
+
+import Banner1 from '/public/jpg/hero.jpg';
 
 const links = [
   {
@@ -37,36 +48,29 @@ export const Header = () => {
   const onScroll = useScrollPosition();
 
   useEffect(() => {
-    if (router.asPath !== CustomRoutesDefault.about()) {
-      if (onScroll > 20) {
-        setIsScroll(true);
-      }
+    if (onScroll > 20) {
+      setIsScroll(true);
     } else {
       setIsScroll(false);
     }
-  }, [onScroll, isScroll]);
+  }, [onScroll]);
 
   return (
     <Box
       as="header"
       paddingY="1rem"
-      transition="position 200ms ease-in-out"
-      position={`${isScroll ? 'fixed' : 'absolute'}`}
+      position="fixed"
       width="100%"
       top={0}
       zIndex={11}
+      transition="all 200ms ease-in-out"
+      backdropFilter={`${isScroll ? 'blur(60px)' : 'blur(0px)'}`}
+      backgroundColor={`${isScroll ? 'blueAlpha.500' : 'transparent'}`}
+      borderBottomWidth="1px"
+      borderColor={`${isScroll ? 'blue.200' : 'transparent'}`}
     >
       <Layout>
-        <HStack
-          transition="all 200ms ease-in-out"
-          justifyContent="space-between"
-          backdropFilter={`${isScroll ? 'blur(12.5px)' : 'blur(0px)'}`}
-          backgroundColor={`${isScroll ? 'blueAlpha.700' : 'transparent'}`}
-          borderRadius="0.5rem"
-          margin={0}
-          border="1px"
-          borderColor={`${isScroll ? 'blue.200' : 'transparent'}`}
-        >
+        <HStack margin={0} justifyContent="space-between">
           <Link href="/">
             <svg
               width="30"
@@ -83,13 +87,13 @@ export const Header = () => {
               />
             </svg>
           </Link>
-          <Box as="nav" paddingY="1rem" display={{ base: 'none', lg: 'block' }}>
-            <UnorderedList display="flex" listStyleType="none">
+          <Box as="nav" display={{ base: 'none', lg: 'block' }}>
+            <UnorderedList display="flex" listStyleType="none" padding={0}>
               {links &&
                 links.map((_, i) => (
                   <ListItem key={i}>
                     <Link className="header-link" href={_.url}>
-                      {_.label}
+                      <Text textStyle="textParagraph02">{_.label}</Text>
                       {router.asPath === _?.url && (
                         <ChakraBox
                           className="header-link-indicator"

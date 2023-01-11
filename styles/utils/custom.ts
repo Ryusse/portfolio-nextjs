@@ -25,9 +25,10 @@ export const GlobalStyles = css`
 
   .header-link {
     position: relative;
-    padding-inline: 2.8rem;
-    padding-block: 1rem;
+    padding-inline: 1.8rem;
+    padding-block: 0.8rem;
     font-weight: 600;
+    display: block;
   }
 `;
 

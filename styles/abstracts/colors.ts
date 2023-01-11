@@ -28,6 +28,7 @@ export const colors = {
   },
 
   blueAlpha: {
+    500: 'rgba(23, 28, 38, 0.5)',
     700: 'rgba(23, 28, 38, 0.7)',
   },
 

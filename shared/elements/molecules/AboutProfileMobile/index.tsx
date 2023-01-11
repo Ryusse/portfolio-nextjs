@@ -1,7 +1,8 @@
-import { Box, Text } from '@chakra-ui/react';
+import { Box, HStack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 
 import ProfileImage from '../../../../public/jpg/hero.jpg';
+import { StyledLocationIcon } from '@/elements/organisms/AboutSidebar/styles';
 
 export const AboutProfileMobile = () => {
   return (
@@ -76,6 +77,10 @@ export const AboutProfileMobile = () => {
           >
             Frontend developer
           </Text>
+          <HStack marginTop="10px" spacing="10px">
+            <StyledLocationIcon />
+            <Text textStyle="textParagraph02">Lima, Perú</Text>
+          </HStack>
         </Box>
       </Box>
     </Box>

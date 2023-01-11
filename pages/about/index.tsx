@@ -36,7 +36,7 @@ const About: NextPage = () => {
         left="50%"
         transform="translateX(-50%)"
       >
-        <Layout columns={2} containerStyles={{ padding: { base: 0, lg: 4 } }}>
+        <Layout columns={2} containerStyles={{ paddingX: 0 }}>
           <AboutSidebar />
           <AboutContent />
         </Layout>

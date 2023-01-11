@@ -11,7 +11,7 @@ export const Container = ({ sx, children }: Props) => {
   return (
     <Box
       sx={sx}
-      border="1px"
+      borderWidth="1px"
       borderColor="blue.200"
       width="100%"
       padding={{ base: '1rem', md: '1.875rem' }}

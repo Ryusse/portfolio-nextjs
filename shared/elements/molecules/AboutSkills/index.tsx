@@ -1,4 +1,12 @@
-import { Badge, Box, HStack, Text, Tooltip, VStack } from '@chakra-ui/react';
+import {
+  Badge,
+  Box,
+  Heading,
+  HStack,
+  Text,
+  Tooltip,
+  VStack,
+} from '@chakra-ui/react';
 
 import { softSkills, techStack, tools } from '@/data/profile';
 import { TooltipLabel } from '@/elements/atoms/TooltipLabel';
@@ -8,13 +16,32 @@ import {
   StyledLinkedin,
 } from '@/elements/organisms/AboutSidebar/styles';
 
-export const AboutSkills = () => {
+interface Props {
+  containerStyles?: any;
+}
+
+export const AboutSkills = ({ containerStyles }: Props) => {
   return (
-    <Box>
+    <Box sx={containerStyles}>
+      <Heading
+        as="h2"
+        textStyle={{ base: 'subheading01', lg: 'heading04' }}
+        size="1px"
+        marginBottom={{ base: '2rem', lg: '3.4rem' }}
+        textAlign="center"
+        color="gray.300"
+        display={{ lg: 'none' }}
+      >
+        My skills
+      </Heading>
       <VStack alignItems="start" spacing="2.375rem">
         {techStack && techStack?.length > 0 && (
           <Box>
-            <Text textStyle="subheading03" color="gray.300" fontWeight="600">
+            <Text
+              textStyle={{ base: 'textParagraph01', lg: 'subheading03' }}
+              color="gray.300"
+              fontWeight="600"
+            >
               Tech Stack
             </Text>
             <HStack
@@ -32,7 +59,11 @@ export const AboutSkills = () => {
           </Box>
         )}
         <Box>
-          <Text textStyle="subheading03" color="gray.300">
+          <Text
+            textStyle={{ base: 'textParagraph01', lg: 'subheading03' }}
+            color="gray.300"
+            fontWeight="600"
+          >
             Tools
           </Text>
           <HStack
@@ -50,7 +81,11 @@ export const AboutSkills = () => {
         </Box>
 
         <Box>
-          <Text textStyle="subheading03" color="gray.300">
+          <Text
+            textStyle={{ base: 'textParagraph01', lg: 'subheading03' }}
+            color="gray.300"
+            fontWeight="600"
+          >
             Soft Skills
           </Text>
           <HStack
@@ -68,7 +103,11 @@ export const AboutSkills = () => {
         </Box>
 
         <Box>
-          <Text textStyle="subheading03" color="gray.300">
+          <Text
+            textStyle={{ base: 'textParagraph01', lg: 'subheading03' }}
+            color="gray.300"
+            fontWeight="600"
+          >
             Contact
           </Text>
           <HStack flexWrap="wrap" spacing={0} gap="1.25rem" marginTop="1.25rem">
